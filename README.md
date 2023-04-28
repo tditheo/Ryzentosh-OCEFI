@@ -6,7 +6,7 @@
  
 |  **Component**   | **Model**                                  |
 | ---------------- | ------------------------------------------ |
-| Processor        | AMD Ryzen 5 5500 @ 3.6GHz (4.2Ghz Turbo    |
+| Processor        | AMD Ryzen 5 5500 @ 3.6GHz (4.2Ghz Turbo)   |
 | Motherboard      | ASUS Prime A320M-C R2.0 (BIOS 6062)        |
 | RAM              | 32GB (2 x 16GB) Corsair Vengeance @ 3600MHz|
 | GPU              | MSI Radeon RX 6600 Mech X2                 |
