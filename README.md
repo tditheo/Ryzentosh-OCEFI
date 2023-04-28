@@ -1,4 +1,4 @@
-# EFI config. for Ryzen 5 5500
+# EFI RYZENTOSH DESKTOP / LAPTOP
  
  
  
@@ -19,7 +19,7 @@
 
 ## Table of contents
 
-- [Software Compatibility](#macOS-Version-Compatibility)
+- [macOS Version Compatibility](#macOS-Version-Compatibility)
 - [Hardware Compatibility](#Hardware-Compatibility)
 - [Installation](#Installation)
 - [BIOS Settings](#BIOS-Settings)
@@ -37,17 +37,14 @@
 - Mojave (10.14.x) (NOT TESTED / Navi 23 / 21 / 10 NOT COMPATIBLE<sup>1</sup><sup>2</sup>)
 - High Sierra (10.13.x) (NOT TESTED / GPU NOT COMPATIBLE<sup>1</sup><sup>2</sup>)
 
-<sup>1</sup>More information : [Dortania's GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html)
+<sup>1</sup>More information : [Dortania's GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) \
 <sup>2</sup>These versions of macOS are not covered here
 
 ## Hardware Compatibility
 
 ### Processor (CPU)
-0000000
-This EFI is compatible with all Ryzen and Athlon 2xxGE processors with
-[macOS-compatible peripherals](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/).
 
-_Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here._
+This EFI is compatible with all Ryzen.
 
 ### Graphical Processing Unit (GPU)
 
@@ -57,7 +54,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | Nvidia     | Partially <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> |
 
-<sup>1</sup> NVidia GT(x) 600 / 700 was dropped in macOS 12 (Monterey), but you can revert this thanks to [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher). Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
+<sup>1</sup> NVidia GT(x) 600 / 700 was dropped in macOS 12 (Monterey), but you can revert this thanks to [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
 
 <sup>2</sup> All Polaris / Vega / Navi GPU are supported in last macOS Version. Older GPUs can be not compatible or need FakeID (More information : [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
 
