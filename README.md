@@ -33,12 +33,9 @@
 - Ventura (13.x) (Works)
 - Monterey (12.x) (NOT TESTED / Supposed to works)
 - Big Sur (11.x) (NOT TESTED / Navi 23 NOT COMPATIBLE<sup>1</sup>)
-- Catalina (10.15.x) (NOT TESTED / Navi 23 / 21 NOT COMPATIBLE<sup>1</sup><sup>2</sup>)
-- Mojave (10.14.x) (NOT TESTED / Navi 23 / 21 / 10 NOT COMPATIBLE<sup>1</sup><sup>2</sup>)
-- High Sierra (10.13.x) (NOT TESTED / GPU NOT COMPATIBLE<sup>1</sup><sup>2</sup>)
 
 <sup>1</sup>More information : [Dortania's GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) \
-<sup>2</sup>These versions of macOS are not covered here
+Older versions of macOS are not covered here.
 
 ## Hardware Compatibility
 
@@ -54,15 +51,13 @@ This EFI is compatible with all Ryzen.
 | Nvidia     | Partially <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> |
 
-<sup>1</sup> NVidia GT(x) 600 / 700 was dropped in macOS 12 (Monterey), but you can revert this thanks to [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
+<sup>1</sup> NVidia GT(x) 600 / 700 was dropped in macOS 12 (Monterey), but you can revert this thanks to [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher). Other NVidia GPU are not supported.
 
 <sup>2</sup> All Polaris / Vega / Navi GPU are supported in last macOS Version. Older GPUs can be not compatible or need FakeID (More information : [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
 
 For **AMD Navi 10 / 21 / 23 Series GPUs (RX 5000 / 6000)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
 [PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI or DisplayPort won't work or will be unstable. It also **may not** work with Nvidia GPUs.
-
-If you want to control monitor's brightness or HDMI/DP audio volume you need to use [MonitorControl](https://github.com/MonitorControl/MonitorControl) for that.
 
 ### Laptops
 
@@ -109,15 +104,6 @@ _Caveats_:
 
 If you experience any issues with your network connection, then your best bet would be to install a different kext, preferably from [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet).
 
-If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older version of kext](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2).
-
-If you have issues with network card on Monterey or newer try adding `e1000=0` to `boots-args`.
-
-SmallTree kext does not work on Monterey for now. You can try [AppleIGB kext](https://cdn.discordapp.com/attachments/724618275971137568/879288441278435348/AppleIGB.kext.zip), it works on some systems. If it does not work you have to stay on Big Sur and wait for SmallTree's update.
-
-### WiFi and Bluetooth
-
-Support for WiFi and Bluetooth is not covered here. You can check on Dortania's Guide to find compatible network card.
 ## Installation
 
 ### Bootable USB
@@ -154,8 +140,6 @@ Support for WiFi and Bluetooth is not covered here. You can check on Dortania's 
 
 4. Use [this tool](https://github.com/corpnewt/GenSMBIOS) to generate your unique SMBIOS info.
 
-- SMBIOS has to be unique, you cannot use one present in this repository.
-
 - Run GenSMBIOS and select `Download MacSerial` and `Generate SMBIOS`.
 - Select the appropriate model for your hardware using the table below.
 - Go to [Apple Coverage](https://checkcoverage.apple.com/) and paste generated _Serial_. You need "Invalid Serial" or "Purchase Date not Validated" message.
@@ -168,24 +152,17 @@ Support for WiFi and Bluetooth is not covered here. You can check on Dortania's 
 
 | **GPU Series**       | **Model**               |
 | -------------------- | ----------------------- |
-| AMD Navi Series      | MacPro7,1 <sup>1</sup> |
-| AMD Vega Series      | MacPro7,1 <sup>1</sup> |
-| AMD Polaris Series   | MacPro7,1 <sup>1</sup> |
+| AMD Navi Series      | MacPro7,1               | 
+| AMD Vega Series      | MacPro7,1               |
+| AMD Polaris Series   | MacPro7,1               |
 | AMD Radeon R5/R7/R9  | MacPro6,1               |
 | AMD HD 8000 Series   | MacPro6,1               |
 | AMD HD 7000 Series   | MacPro6,1               |
-| Nvidia Kepler Series | MacPro7,1 <sup>2</sup>  |
-
-<sup>1</sup> For Catalina and older, you can use iMacPro1,1 tu avoid any issues.
-
-<sup>2</sup> For Catalina and older use `iMac14,2`.
+| Nvidia Kepler Series | MacPro7,1               |
 
 ### Configuration
 
-5. You should update your BIOS to the latest version and configure it appropriately. See [BIOS Settings](#BIOS-Settings) for details.
-6. Remember to verify your hardware and apply appropriate changes to your configuration file. See [Hardware Compatibility](#Hardware-compatibility) for details.
-7. Map your USB ports with [USBToolBox](https://github.com/USBToolBox/tool). Guide about it is available [here](https://github.com/USBToolBox/tool#usage). You have to do it from Windows.
-8. That's it! Now you can boot macOS installer.
+5. Map your USB ports with [USBToolBox](https://github.com/USBToolBox/tool). Guide about it is available [here](https://github.com/USBToolBox/tool#usage). You have to do it from Windows.
 
 ## BIOS Settings
 
@@ -201,7 +178,7 @@ Support for WiFi and Bluetooth is not covered here. You can check on Dortania's 
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
 
-<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file.
+<sup>1</sup> If you have this option in BIOS you must also add `npci=0x2000` from `boot-args` in your configuration file.
 
 **Some of these options may not exist in your firmware, just try to match it as closely as possible.**
 
