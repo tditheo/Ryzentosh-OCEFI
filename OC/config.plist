@@ -119,18 +119,6 @@
 				<key>layout-id</key>
 				<data>DAAAAA==</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)
-</key>
-			<dict>
-				<key>@0,name</key>
-				<string>ATY,Henbury</string>
-				<key>@1,name</key>
-				<string>ATY,Henbury</string>
-				<key>@2,name</key>
-				<string>ATY,Henbury</string>
-				<key>@3,name</key>
-				<string>ATY,Henbury</string>
-			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -139,24 +127,6 @@
 	<dict>
 		<key>Add</key>
 		<array>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AmdTscSync.kext</string>
-				<key>Comment</key>
-				<string>AmdTscSync.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AmdTscSync</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
 			<dict>
 				<key>Arch</key>
 				<string>Any</string>
@@ -1498,6 +1468,8 @@
 			<key>UIScale</key>
 			<integer>0</integer>
 			<key>UgaPassThrough</key>
+			<false/>
+			<key>GopBurstMode</key>
 			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
