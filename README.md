@@ -1,6 +1,7 @@
 # EFI RYZENTOSH DESKTOP / LAPTOP
  
- 
+## FOR SETUP GUIDE, PLEASE GO TO THE [WIKI](https://github.com/tditheo/Ryzentosh-OCEFI/wiki)
+
 ## My Specifications
  
 |  **Component**   | **Model**                                  |
@@ -15,6 +16,11 @@
 
 **macOS version**: 13.3.1 (22E261) \
 **OpenCore version**: 0.9.1
+
+### What's works :
+
+### What's not working :
+
 
 ## Credits
 
