@@ -17,10 +17,18 @@
 **macOS version**: 13.3.1 (22E261) \
 **OpenCore version**: 0.9.2
 
-### What's works :
+### What's working :
+
+- Ethernet
+- GPU acceleration
+- Audio
+- Dual-booting with Windows (Set Kernel > Quirks > CustomSMBIOSGuid > to True (default is False) and PlatformInfo > UpdateSMBIOSMode > to Custom (default is Create) to avoid Activations issues).
+- iMessage, FaceTime and others Apple Services
 
 ### What's not working :
 
+- Microphone (due to AppleALC and AMD CPU)
+- WiFi, Bluetooth, AirDrop, SideCar etc.. (because I don't have WiFi card)
 
 ## Credits
 
