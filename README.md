@@ -15,7 +15,7 @@
 | SSD              | M.2 NVMe PNY CS1030 500GB PCIe 3.0	     |
 
 **macOS version**: 13.3.1 (22E261) \
-**OpenCore version**: 0.9.1
+**OpenCore version**: 0.9.2
 
 ### What's works :
 
