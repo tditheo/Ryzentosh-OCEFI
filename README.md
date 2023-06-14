@@ -14,7 +14,7 @@
 | Ethernet         | Realtek RTL8111                            |
 | SSD              | M.2 NVMe PNY CS1030 500GB PCIe 3.0	     |
 
-**macOS version**: 13.3.1 (22E261) \
+**macOS version**: 13.3.1 (22E261) / Testing macOS 14 Beta \
 **OpenCore version**: 0.9.2
 
 ### What's working :
