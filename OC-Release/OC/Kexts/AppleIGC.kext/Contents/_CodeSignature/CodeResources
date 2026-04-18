@@ -3,9 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>files</key>
-	<dict/>
+	<dict>
+		<key>Resources/README.md</key>
+		<data>
+		JxHzVBzXupX/OkGpbonGhTyzCUQ=
+		</data>
+	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Resources/README.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JxHzVBzXupX/OkGpbonGhTyzCUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			5AviWKbmTIrguruUpJFgZ9YJJm/pLIQ6tnq53+GkQN0=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^Resources/</key>
